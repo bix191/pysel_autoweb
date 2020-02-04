@@ -1,0 +1,168 @@
+{
+    "head": {
+	"title": "GitLab自動操作",
+	"waitTime": "2",
+	"screenshot_xlsxfile": "/tmp/gitlab_screenshot/scrshot.xlsx"
+    },
+    "step":[
+	{
+	    "command": "navigate",
+	    "url": "http://cyclone.toybox:3080/",
+	    "window": "win1",
+	    "description": "GitLabのトップページに移動",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc01.png",
+	    "screenshot_xlsx": "shot01"
+	},
+	{
+	    "command": "send_keys",
+	    "elm_xpath": "//*[@id=\"user_login\"]",
+	    "send_keys": "user1",
+	    "description": "ユーザ名を入力",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc02.png",
+	    "screenshot_xlsx": "shot02"
+	},
+	{
+	    "command": "send_keys",
+	    "elm_xpath": "//*[@id=\"user_password\"]",
+	    "send_keys": "user1user1",
+	    "description": "パスワードを入力",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc03.png",
+	    "screenshot_xlsx": "shot03"
+	},
+	{
+	    "command": "submit",
+	    "elm_xpath": "//*[@id=\"new_user\"]",
+	    "description": "submit",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc04.png",
+	    "screenshot_xlsx": "shot04"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div/div[3]/div/div/div[4]/ul/li/div[2]/div[1]/div[1]/h2/a",
+	    "description": "プロジェクト「GitLabとSphinxで始めるドキュメントDevOps」をクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc05.png",
+	    "screenshot_xlsx": "shot05"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div/ul/li[2]/a",
+	    "description": "Repositoryリンクをクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc06.png",
+	    "screenshot_xlsx": "shot06"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div/ul/li[2]/ul/li[8]/a",
+	    "description": "Graphリンクをクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc07.png",
+	    "screenshot_xlsx": "shot07"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div/ul/li[1]/a",
+	    "description": "プロジェクトのホームに戻る(リンククリック)",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc08.png",
+	    "screenshot_xlsx": "shot08"
+	},
+	{
+	    "command": "getElemByXpath",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h1",
+	    "description": "プロジェクトホーム上に表示されているプロジェクト名を取得"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "//*[@id=\"logo\"]",
+	    "description": "GitLabロゴをクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc09.png",
+	    "screenshot_xlsx": "shot09"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div/div[3]/div/div/div[1]/div/a",
+	    "description": "New projectをクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc10.png",
+	    "screenshot_xlsx": "shot10"
+	},
+	{
+	    "command": "send_keys",
+	    "elm_xpath": "//*[@id=\"project_name\"]",
+	    "send_keys": "oreoreproject1",
+	    "description": "プロジェクト名入力",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc11.png",
+	    "screenshot_xlsx": "shot11"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div/div[3]/div/div[1]/div[2]/div[2]/div/div[1]/form/input[3]",
+	    "description": "Create projectクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc12.png",
+	    "screenshot_xlsx": "shot12"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div/div[2]/ul/li[2]/a",
+	    "description": "Add READMEクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc13.png",
+	    "screenshot_xlsx": "shot13"
+	},
+	{
+	    "command": "send_keys",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div[2]/form/div[1]/div[2]/pre/textarea",
+	    "send_keys": "**oreore** oredayoo!!",
+	    "description": "README作成",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc14.png",
+	    "screenshot_xlsx": "shot14"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div[2]/form/div[3]/button",
+	    "description": "Commit changesクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc15.png",
+	    "screenshot_xlsx": "shot15"
+	},
+	{
+	    "command": "scroll_element_to",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div",
+	    "x-coord": 0,
+	    "y-coord": 645,
+            "description": "サイドメニューのSettingsまでスクロール",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc16.png",
+	    "screenshot_xlsx": "shot16"
+	},
+	{
+	    "command": "move_to_element",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div/ul/li[9]/a",
+	    "description": "Settingsマウスオーバー",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc17.png",
+	    "screenshot_xlsx": "shot17"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[1]/div/ul/li[9]/a",
+	    "description": "Settingsクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc18.png",
+	    "screenshot_xlsx": "shot18"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div[1]/section[6]/div[1]/button",
+	    "description": "Advanced Expandクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc19.png",
+	    "screenshot_xlsx": "shot19"
+	},
+   	{
+	    "command": "submit",
+	    "elm_xpath": "/html/body/div[2]/div[2]/div[3]/div/div[1]/section[6]/div[2]/div[5]/form",
+	    "description": "Remove project submit",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc20.png",
+	    "screenshot_xlsx": "shot20"
+	},
+	{
+	    "command": "click",
+	    "elm_xpath": "//*[@id=\"logo\"]",
+	    "description": "GitLabロゴをクリック",
+	    "screenshot_file": "/tmp/gitlab_screenshot/sc21.png",
+	    "screenshot_xlsx": "shot21"
+	}
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "head": {
+	"title": "Googleサーチエンジン自動操作",
+	"waitTime": "1",
+	"screenshot_xlsxfile": "/tmp/google_screenshot/scrshot.xlsx"
+    },
+    "step":[
+	{
+	    "command": "navigate",
+	    "url": "https://www.google.com/",
+	    "window": "win1",
+	    "description": "Googleサーチのトップページに移動",
+	    "screenshot_file": "/tmp/google_screenshot/sc01.png",
+	    "screenshot_xlsx": "shot01"
+	},
+	{
+	    "command": "send_keys",
+	    "elm_xpath": "/html/body/div/div[3]/form/div[2]/div/div[1]/div/div[1]/input",
+	    "send_keys": "X68000",
+	    "description": "検索キーワードを入力",
+	    "screenshot_file": "/tmp/google_screenshot/sc02.png",
+	    "screenshot_xlsx": "shot02"
+	},
+	{
+	    "command": "submit",
+	    "elm_xpath": "//*[@id=\"tsf\"]",
+	    "description": "submit",
+	    "screenshot_file": "/tmp/google_screenshot/sc03.png",
+	    "screenshot_xlsx": "shot03"
+	},
+	{
+	    "command": "getElemByXpath",
+	    "elm_xpath": "//*[@id=\"resultStats\"]",
+	    "description": "検索結果件数を取得"
+	}
+    ]
+}
